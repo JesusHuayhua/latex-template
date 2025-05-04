@@ -1,0 +1,51 @@
+\documentclass[12pt]{report}
+
+% Configuraciones globales
+\input{configuraciones/paquetes}
+\input{configuraciones/configuraciones}
+\input{configuraciones/estilos_personalizados}
+\input{configuraciones/colores}
+
+\begin{document}
+
+%% ==================
+% Material preliminar
+%% ==================
+
+\include{portada/caratula}
+\tableofcontents   % Índice de secciones
+\listoffigures     % Índice de figuras
+\listoftables      % Índice de tablas
+%% ==================
+% Cuerpo principal
+%% ===================
+
+% Capítulos
+
+\include{capitulos/01_primera_seccion/main}
+\include{capitulos/02_segunda_seccion/main}
+
+%% ==================
+% Material final
+%% ==================
+%\backmatter
+%\input{contraportada/conclusiones}
+%\input{contraportada/anexos/anexo_a}
+
+%% ==================
+% Bibliografía
+%% ==================
+%\bibliographystyle{unsrt}
+%\bibliography{bibliografia}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
