@@ -1,7 +1,70 @@
-\setbeamercolor{block title}			{use=structure, fg=gris_claro, bg=azul_marino}
-\setbeamercolor{block body}				{use=structure, fg=gris_claro, bg=purple!10}
-\setbeamercolor{head}					{bg=verde_bosque}
-\setbeamercolor{jumbo}					{bg=pucp}
+% ================================================================================
+% Color Accents
+% ================================================================================
+
+\setbeamercolor{title}					{fg=gris_claro}
+\setbeamercolor{author}					{fg=gris_claro}
+\setbeamercolor{date}					{fg=gris_claro}
+\setbeamercolor{institute}				{fg=gris_claro}
+\setbeamercolor{head}					{bg=azul_electrico}
+
+\setbeamercolor{alerted text}			{fg=rojo_carmin}
+\setbeamercolor{normal text}			{fg=black, bg=white}
+\setbeamercolor{structure}				{fg=naranja_rojo}
+
+\setbeamercolor{jumbo}					{bg=azul_electrico}
+\setbeamercolor{progress bar}			{fg=celeste_claro, bg=verde_bosque}
+\setbeamercolor{progress bar progress}	{use=progress bar, bg=progress bar.fg}
+
+
+\setbeamercolor{block title}			{use=structure, fg=white, bg=gris_claro}
+\setbeamercolor{block body}				{use=structure, fg=white, bg=gris_claro!10}
+
+
+% ================================================================================
+% Fonts
+% ================================================================================
+
+\setbeamerfont{title}					{series=\bfseries, size=\Large}
+\setbeamerfont{subtitle}				{series=\mdseries, size=\normalsize}
+
+\setbeamerfont{author}					{size=\small}
+\setbeamerfont{date}					{size=\footnotesize}
+\setbeamerfont{institute}				{size=\footnotesize}
+
+\setbeamerfont{alerted text}			{series=\bfseries}
+
+\setbeamerfont{frametitle}				{series=\bfseries}
+\setbeamerfont{framesubtitle}			{series=\mdseries}
+\setbeamerfont{footline}				{size=\scriptsize}
+\setbeamerfont{block title}				{size=\normalsize, series=\bfseries}
+\setbeamerfont{block body}				{size=\normalsize}
+
+\usefonttheme{serif}
+
+
+
+% ================================================================================
+% Basic Settings
+% ================================================================================
+
+% cancel navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+% prettier boxes
+\setbeamertemplate{blocks}[rounded]
+
+% bullet points
+\setbeamertemplate{itemize item}		{\textbullet}
+\setbeamertemplate{itemize subitem}		{\textemdash}
+\setbeamertemplate{itemize subsubitem}	{\ensuremath{\circ}}
+
+% paragraph spacing
+\setlength{\parskip}					{5pt}
+
+% ================================================================================
+% Slide Templates
+% ================================================================================
 
 % headline for all frames
 \setbeamertemplate{headline}{
@@ -9,7 +72,7 @@
 		% not display the headline for the title page
 	\else
 		\begin{beamercolorbox}[wd=\paperwidth,ht=40pt]{head}
-			\hspace{410pt}\includegraphics[width=5pt]{figuras/logo-negativo}
+			\hspace{320pt}\includegraphics[width=120pt]{figuras/logotipo-negativo-completo}
 		\end{beamercolorbox}
 	\fi
 }
@@ -18,10 +81,10 @@
 \setbeamertemplate{frametitle}{
     \begin{picture}(0,0)
         \ifx\insertframesubtitle\@empty%
-            \put(0,27){\usebeamerfont{frametitle}\usebeamercolor[black]{title}\insertframetitle}%
+            \put(0,27){\usebeamerfont{frametitle}\usebeamercolor[white]{title}\insertframetitle}%
 		\else%
-			\put(0,32){\usebeamerfont{frametitle}\usebeamercolor[black]{title} \insertframetitle}%
-			\put(0,20){\usebeamerfont{framesubtitle}\usebeamercolor[black]{title} \insertframesubtitle }
+			\put(0,32){\usebeamerfont{frametitle}\usebeamercolor[white]{title} \insertframetitle}%
+			\put(0,20){\usebeamerfont{framesubtitle}\usebeamercolor[white]{title} \insertframesubtitle }
 		\fi
     \end{picture}
 }
@@ -29,12 +92,12 @@
 % title page
 \setbeamertemplate{title page}{
 	\begin{picture}(0,0)
-		\put(-24,67){\includegraphics[width=40pt]{figuras/barquito-pucp.pdf}}
+		\put(-24,67){\includegraphics[width=125pt]{figuras/logotipo-principal-completo}}
         \put(-5,-77){
             \begin{beamercolorbox}[wd=1.1\paperwidth,ht=140pt]{jumbo}
             \end{beamercolorbox}
         }
-        \put(150,-90){\includegraphics[width=250pt]{figuras/logo-negativo}}
+        \put(275,-75){\includegraphics[width=130pt]{figuras/logotipo-negativo-barco}}
 		\put(0,25){%
 			\begin{minipage}{300pt}
 				\usebeamerfont{title}\usebeamercolor[white]{title}\inserttitle\par
@@ -53,4 +116,51 @@
 		}
         %\put(285,-118){\includegraphics[width=140pt]{figuras/logo-negativo}}
 	\end{picture}
+}
+
+% style of sections and subsections in ToCs
+\setbeamertemplate{section in toc}{
+	$\blacktriangleright$~\textbf{\inserttocsection}
+}
+\setbeamertemplate{subsection in toc}{
+\textcolor{rosa_fucsia}{$\blacktriangleright$}~\textbf{\inserttocsubsection}
+	
+}
+%\setbeamertemplate{frametitle continuation}{}
+
+
+%%% begin of sections
+\AtBeginSection[]
+{
+    \begingroup
+    \begin{frame}{Contenido}{}
+    	\begin{picture}(0,0)
+            \put(0.5\textwidth,-0.5\textheight){
+          		\begin{tikzpicture}[opacity=0.3]
+    			    \input{figuras/logotipo-principal-barco.pdf_tex}
+			    \end{tikzpicture}
+    		}
+    	\end{picture}
+        \tableofcontents[currentsection,subsectionstyle=hide]
+    \end{frame}
+    \endgroup
+}
+
+\AtBeginSubsection[]
+{
+
+\begin{frame}{Contenido Subsection}{}
+    	\begin{picture}(0,0)
+            \put(0.5\textwidth,-0.5\textheight){
+          		\begin{tikzpicture}[opacity=0.3]
+    			    \input{figuras/logotipo-principal-barco.pdf_tex}
+			    \end{tikzpicture}
+    		}
+    	\end{picture}
+\tableofcontents[
+  currentsection,
+  sectionstyle=show/show,
+  subsectionstyle=show/shaded/hide
+]
+    \end{frame}
 }
