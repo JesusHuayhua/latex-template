@@ -6,13 +6,13 @@
 \setbeamercolor{author}					{fg=gris_claro}
 \setbeamercolor{date}					{fg=gris_claro}
 \setbeamercolor{institute}				{fg=gris_claro}
-\setbeamercolor{head}					{bg=azul_electrico}
+\setbeamercolor{head}					{bg=azul_marino}
 
 \setbeamercolor{alerted text}			{fg=rojo_carmin}
 \setbeamercolor{normal text}			{fg=black, bg=white}
 \setbeamercolor{structure}				{fg=naranja_rojo}
 
-\setbeamercolor{jumbo}					{bg=azul_electrico}
+\setbeamercolor{jumbo}					{bg=azul_marino}
 \setbeamercolor{progress bar}			{fg=celeste_claro, bg=verde_bosque}
 \setbeamercolor{progress bar progress}	{use=progress bar, bg=progress bar.fg}
 
@@ -71,11 +71,30 @@
 	\ifnum\theframenumber=1
 		% not display the headline for the title page
 	\else
-		\begin{beamercolorbox}[wd=\paperwidth,ht=40pt]{head}
-			\hspace{320pt}\includegraphics[width=120pt]{figuras/logotipo-negativo-completo}
+		\begin{beamercolorbox}[wd=\paperwidth,ht=30pt]{head}
+			\hspace{400pt}\includegraphics[width=30pt]{logotipo-negativo-barco}
 		\end{beamercolorbox}
 	\fi
 }
+
+
+% Configuración del footer
+\setbeamertemplate{footline}{
+	\ifnum\theframenumber=1
+		% not display the headline for the title page
+	\else
+   \begin{beamercolorbox}[ht=4ex,leftskip=1.4cm,rightskip=.3cm]{author in head/foot}
+	\color{azul_marino}
+    \hrule
+    \vspace{0.1cm}
+    \insertdate \hfill \inserttitle \newline
+    \insertshortauthor \ - \insertshortinstitute \hfill \insertframenumber/\inserttotalframenumber
+   \end{beamercolorbox}
+	\fi
+	\vspace*{0.1cm}
+} 
+
+
 
 
 % frame title and subtitle
@@ -84,7 +103,7 @@
         \ifx\insertframesubtitle\@empty%
             \put(0,27){\usebeamerfont{frametitle}\usebeamercolor[white]{title}\insertframetitle}%
 		\else%
-			\put(0,32){\usebeamerfont{frametitle}\usebeamercolor[white]{title} \insertframetitle}%
+			\put(0,25){\usebeamerfont{frametitle}\usebeamercolor[white]{title} \insertframetitle}%
 			\put(0,20){\usebeamerfont{framesubtitle}\usebeamercolor[white]{title} \insertframesubtitle }
 		\fi
     \end{picture}
@@ -93,12 +112,11 @@
 % title page
 \setbeamertemplate{title page}{
 	\begin{picture}(0,0)
-		\put(-24,67){\includegraphics[width=125pt]{figuras/logotipo-principal-completo}}
         \put(-5,-77){
             \begin{beamercolorbox}[wd=1.1\paperwidth,ht=140pt]{jumbo}
             \end{beamercolorbox}
         }
-        \put(275,-75){\includegraphics[width=130pt]{figuras/logotipo-negativo-barco}}
+        \put(275,-100){\transparent{0.5}\includegraphics[width=180pt]{figuras/logotipo-negativo-barco}}
 		\put(0,25){%
 			\begin{minipage}{300pt}
 				\usebeamerfont{title}\usebeamercolor[white]{title}\inserttitle\par
@@ -108,13 +126,13 @@
 				\usebeamerfont{subtitle}\usebeamercolor[white]{subtitle}\insertsubtitle
 			\end{minipage}
 		}
-		\put(0,-45){%
+		\put(0,-35){%
 			\usebeamerfont{author}\usebeamercolor[white]{author}\insertauthor
 		}
-        \put(0,-58){%
+        \put(0,-48){%
 			\usebeamerfont{institute}\usebeamercolor[white]{institute}\insertinstitute
 		}
-		\put(0,-70){%
+		\put(0,-60){%
 			\usebeamerfont{date}\usebeamercolor[white]{date}\insertdate
 		}
         %\put(285,-118){\includegraphics[width=140pt]{figuras/logo-negativo}}
@@ -122,11 +140,13 @@
 }
 
 % style of sections and subsections in ToCs
+
 \setbeamertemplate{section in toc}{
 	$\blacktriangleright$~\textbf{\inserttocsection}
 }
+
 \setbeamertemplate{subsection in toc}{
-\textcolor{verde_menta}{$\blacktriangleright$}~\textbf{\inserttocsubsection}
+\quad\textcolor{verde_menta}{$\blacktriangleright$}~\textbf{\inserttocsubsection}
 	
 }
 %\setbeamertemplate{frametitle continuation}{}
@@ -154,7 +174,10 @@
 \AtBeginSubsection[]
 {
 
-\begin{frame}{Contenido de \hypersetup{linkcolor=white}\insertsectionhead}
+\begin{frame}{Contenido de \hypersetup{linkcolor=white}\insertsection}
       \tableofcontents[currentsection,sectionstyle=show/hide,subsectionstyle=show/shaded/hide]	
     \end{frame}
 }
+
+
+
