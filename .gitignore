@@ -11,3 +11,6 @@ _minted-main/
 *.blg
 *.bbl
 *.snm
+*.fdb_latexmk
+*.fls
+*.lot
