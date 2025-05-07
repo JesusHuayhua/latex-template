@@ -7,3 +7,7 @@ _minted-main/
 *.snippets
 *.synctex.gz
 *.toc
+*.nav
+*.blg
+*.bbl
+*.snm
