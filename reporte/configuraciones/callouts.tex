@@ -1,0 +1,91 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% NOTAS CON COLORES DE PUCP
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtcolorbox{pucpImportant}[0]
+{
+coltitle=floralwhite,
+colback=anti-flashwhite,
+colframe=pucpRojoOscuro,
+fonttitle=\bfseries,
+title= \faExclamationCircle\ Importante,
+width=\linewidth,
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% GIT CODE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtcolorbox{gitCode}[1][ ]
+{
+coltitle=gitBlanco,
+colback=gitGris,
+colframe=gitNaranja,
+fonttitle=\bfseries,
+title=\faIcon{git-alt} #1,
+%title=\import{Imagenes/}{git.pdf_tex} #1,
+%title= \simpleicon{git} #1,
+width=\linewidth
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TERMINAL
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtcolorbox{terminal}[1][]
+{
+colback=bashWhite,
+colframe=bashBlack,
+fonttitle=\bfseries,
+title= \faIcon{terminal} #1,
+width=\linewidth,
+halign=center
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SOLO PARA EL INFORME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtcolorbox{ubuntu}[0]
+{
+colback=ubuntuBlanco,
+colframe=ubuntuNaranja,
+fonttitle=\bfseries,
+title= \import{01Instalacion/Imagenes/linux/}{ubuntu.pdf_tex} ,
+width=\linewidth,
+halign=center
+}
+
+\newtcolorbox{fedora}[0]
+{
+colback=fedoraGrisClaro,
+colframe=fedoraAzul,
+fonttitle=\bfseries,
+title= \import{01Instalacion/Imagenes/linux/}{fedora.pdf_tex} ,
+%title=\faIcon{fedora},
+width=\linewidth,
+halign=center
+}
+
+\newtcolorbox{gentoo}[0]
+{
+colback=gentooBlanco,
+colframe=gentooMorado,
+fonttitle=\bfseries,
+title=\import{01Instalacion/Imagenes/linux/}{gentoo.pdf_tex} ,
+width=\linewidth,
+halign=center
+}
+
+\newtcolorbox{archLinux}[0]
+{
+colback=archBlanco,
+colframe=archAzul,
+fonttitle=\bfseries,
+title= \import{01Instalacion/Imagenes/linux/}{archlinux.pdf_tex} ,
+width=\linewidth,
+halign=center
+}
+
+\newtcolorbox{nixos}[0]
+{
+colback=nixosBlanco,
+colframe=nixosAzul,
+fonttitle=\bfseries,
+title=\import{01Instalacion/Imagenes/linux/}{nixos.pdf_tex},
+width=\linewidth,
+halign=center
+}

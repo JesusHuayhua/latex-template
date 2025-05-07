@@ -1,0 +1,13 @@
+_minted-main/
+*.aux
+*.dvi
+*.log
+*.out
+*.pygmented
+*.snippets
+*.synctex.gz
+*.toc
+*.nav
+*.blg
+*.bbl
+*.snm
