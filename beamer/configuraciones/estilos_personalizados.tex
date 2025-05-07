@@ -77,6 +77,7 @@
 	\fi
 }
 
+
 % frame title and subtitle
 \setbeamertemplate{frametitle}{
     \begin{picture}(0,0)
@@ -101,7 +102,9 @@
 		\put(0,25){%
 			\begin{minipage}{300pt}
 				\usebeamerfont{title}\usebeamercolor[white]{title}\inserttitle\par
-				\vspace{10pt}
+				\vspace{10pt}\setbeamertemplate{section in head/foot}{%
+    \textcolor{white}{\insertsectionhead}%
+}
 				\usebeamerfont{subtitle}\usebeamercolor[white]{subtitle}\insertsubtitle
 			\end{minipage}
 		}
@@ -123,7 +126,7 @@
 	$\blacktriangleright$~\textbf{\inserttocsection}
 }
 \setbeamertemplate{subsection in toc}{
-\textcolor{rosa_fucsia}{$\blacktriangleright$}~\textbf{\inserttocsubsection}
+\textcolor{verde_menta}{$\blacktriangleright$}~\textbf{\inserttocsubsection}
 	
 }
 %\setbeamertemplate{frametitle continuation}{}
@@ -132,35 +135,26 @@
 %%% begin of sections
 \AtBeginSection[]
 {
-    \begingroup
+
     \begin{frame}{Contenido}{}
-    	\begin{picture}(0,0)
-            \put(0.5\textwidth,-0.5\textheight){
-          		\begin{tikzpicture}[opacity=0.3]
-    			    \input{figuras/logotipo-principal-barco.pdf_tex}
-			    \end{tikzpicture}
-    		}
-    	\end{picture}
-        \tableofcontents[currentsection,subsectionstyle=hide]
+  \begin{columns}
+    \begin{column}{.45\textwidth}
+      \tableofcontents[currentsection,subsectionstyle=hide/hide,sections=1-{\numexpr\totvalue{section}/2\relax}]
+    \end{column}
+    \begin{column}{.45\textwidth}
+      \tableofcontents[currentsection,subsectionstyle=hide/hide,sections={\numexpr\totvalue{section}/2+1\relax}-]
+    \end{column}
+  \end{columns}
+
+
     \end{frame}
-    \endgroup
 }
+
 
 \AtBeginSubsection[]
 {
 
-\begin{frame}{Contenido Subsection}{}
-    	\begin{picture}(0,0)
-            \put(0.5\textwidth,-0.5\textheight){
-          		\begin{tikzpicture}[opacity=0.3]
-    			    \input{figuras/logotipo-principal-barco.pdf_tex}
-			    \end{tikzpicture}
-    		}
-    	\end{picture}
-\tableofcontents[
-  currentsection,
-  sectionstyle=show/show,
-  subsectionstyle=show/shaded/hide
-]
+\begin{frame}{Contenido de \hypersetup{linkcolor=white}\insertsectionhead}
+      \tableofcontents[currentsection,sectionstyle=show/hide,subsectionstyle=show/shaded/hide]	
     \end{frame}
 }
