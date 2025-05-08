@@ -1,15 +1,35 @@
 %% ============================================
 %% 2. FORMATO Y DISEÑO DE PÁGINA
 %% ============================================
+
+
 \geometry{
-    a4paper,
-    left=25mm,
-    right=20mm,
-    top=30mm,
-    bottom=25mm,
+a4paper,
+left=25mm,
+right=25mm,
+top=25mm,
+bottom=25mm,
+includehead,
+nomarginpar,
+headheight=15pt,
 }
 
-\parindent = 0mm%Para eliminar la sangría de las páginas
+%\parindent = 0mm%Para eliminar la sangría de las páginas
+
+%% -----------------------------
+% FANCY STYLE
+%% -----------------------------
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\nouppercase{\rightmark\hfill\leftmark}}
+\fancyhead[RO]{\nouppercase{\leftmark\hfill\rightmark}}
+
+\fancyfoot[LE]{\nouppercase{\thepage\hfill\TheAuthorShort}}
+\fancyfoot[RO]{\nouppercase{\TheAuthor\hfill\thepage}}
+
+
+\renewcommand{\footrulewidth}{0.2pt}  % Elimina la línea predeterminada en el pie de página
 
 %% ============================================
 %% 4. GRÁFICOS Y MULTIMEDIA
@@ -22,8 +42,8 @@
 \hypersetup{
 	hidelinks,
     colorlinks=true, 
-    linkcolor=airforceblue,
-    urlcolor=airforceblue,
+    linkcolor=pucp,
+    urlcolor=naranja_rojo,
 }
 
 

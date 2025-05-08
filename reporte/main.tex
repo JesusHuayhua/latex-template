@@ -1,10 +1,18 @@
-\documentclass[12pt]{report}
+\documentclass[twoside,12pt]{report}
 
 % Configuraciones globales
 \input{configuraciones/paquetes}
 \input{configuraciones/configuraciones}
 \input{configuraciones/estilos_personalizados}
 \input{configuraciones/colores}
+
+
+\Institution{Pontifica Universidad Católica del Perú}
+\AreaInstitution{Ciencia e Ingeniería}
+\Logo{logotipo-principal-barco.pdf_tex}
+\NameDocument{Documento de Visión}
+\Author{Huayhua F, Jesus M.}{Huayhua Flores, Jesus Mauricio}
+\CodeAuthor{20196201}
 
 \begin{document}
 
@@ -13,17 +21,67 @@
 %% ==================
 
 \include{portada/caratula}
+
 \tableofcontents   % Índice de secciones
+\thispagestyle{fancy} % Aplica el estilo fancy al índice
 \listoffigures     % Índice de figuras
+\thispagestyle{fancy} % Aplica el estilo fancy al índice
 \listoftables      % Índice de tablas
+\thispagestyle{fancy} % Aplica el estilo fancy al índice
 %% ==================
 % Cuerpo principal
 %% ===================
 
 % Capítulos
+\chapter{Primera Capitulo}
+\lipsum[1-10]
+\section{Prueba de seccion}
+\lipsum[1-10]
+\section{Prueba de seccion }
+\lipsum[1-10]
 
-\include{capitulos/01_primera_seccion/main}
-\include{capitulos/02_segunda_seccion/main}
+\section{Colores Principales y Secundarios}
+
+\subsection{Color Principal}
+\begin{center}
+    \textbf{Azul Principal} \\[1ex]
+    \color[HTML]{042354} \rule{10cm}{1cm}
+\end{center}
+
+\subsection{Colores Secundarios Claros}
+
+\begin{itemize}
+    \item \textbf{Gris Claro}: \color[HTML]{99B3B3} \rule{6cm}{1cm}
+    \item \textbf{Celeste Claro}: \color[HTML]{41B9E4} \rule{6cm}{1cm}
+    \item \textbf{Verde Menta}: \color[HTML]{16C78E} \rule{6cm}{1cm}
+    \item \textbf{Verde Limón}: \color[HTML]{8BB733} \rule{6cm}{1cm}
+    \item \textbf{Verde Pastel}: \color[HTML]{ADD754} \rule{6cm}{1cm}
+    \item \textbf{Rosa Pastel}: \color[HTML]{F56EB4} \rule{6cm}{1cm}
+    \item \textbf{Rosa Suave}: \color[HTML]{FF9CD7} \rule{6cm}{1cm}
+    \item \textbf{Naranja Brillante}: \color[HTML]{FF9929} \rule{6cm}{1cm}
+    \item \textbf{Amarillo Mostaza}: \color[HTML]{F0AE19} \rule{6cm}{1cm}
+    \item \textbf{Amarillo Neón}: \color[HTML]{FAD634} \rule{6cm}{1cm}
+\end{itemize}
+
+\subsection{Colores Secundarios Oscuros}
+
+\begin{itemize}
+    \item \textbf{Azul Marino}: \color[HTML]{004EA8} \rule{6cm}{1cm}
+    \item \textbf{Azul Eléctrico}: \color[HTML]{2841DD} \rule{6cm}{1cm}
+    \item \textbf{Púrpura}: \color[HTML]{7F32C8} \rule{6cm}{1cm}
+    \item \textbf{Azul Vivo}: \color[HTML]{5064F7} \rule{6cm}{1cm}
+    \item \textbf{Azul Turquesa}: \color[HTML]{0A7BC2} \rule{6cm}{1cm}
+    \item \textbf{Morado Oscuro}: \color[HTML]{A31598} \rule{6cm}{1cm}
+    \item \textbf{Fucsia Oscuro}: \color[HTML]{C822BC} \rule{6cm}{1cm}
+    \item \textbf{Verde Bosque}: \color[HTML]{008768} \rule{6cm}{1cm}
+    \item \textbf{Azul Petróleo}: \color[HTML]{0A819B} \rule{6cm}{1cm}
+    \item \textbf{Morado Brillante}: \color[HTML]{9F42F5} \rule{6cm}{1cm}
+    \item \textbf{Rojo Carmín}: \color[HTML]{C3094A} \rule{6cm}{1cm}
+    \item \textbf{Rosa Fucsia}: \color[HTML]{E2284D} \rule{6cm}{1cm}
+    \item \textbf{Naranja Rojo}: \color[HTML]{E23008} \rule{6cm}{1cm}
+    \item \textbf{Gris Azulado}: \color[HTML]{667892} \rule{6cm}{1cm}
+\end{itemize}
+
 
 %% ==================
 % Material final
@@ -37,6 +95,7 @@
 %% ==================
 %\bibliographystyle{unsrt}
 %\bibliography{bibliografia}
+
 \end{document}
 
 

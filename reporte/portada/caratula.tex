@@ -1,32 +1,29 @@
 \begin{titlepage}
     \begin{center}
-        {\huge \textbf{Nombre de la institución}}\\
+        {\huge \textbf{\TheInstituion}}\\
         \vspace{5mm}
-        {\LARGE \textbf{Área de la institución}}\\
+        {\LARGE \textbf{\TheAreaInstitution}}\\
         \vspace{1cm}
         \centering
 		\begin{figure}[h]
 		    \centering
-	    	\def\svgwidth{0.5\textwidth}
-	    	 \input{./figuras/logo.pdf_tex}
+			\includeinkscape[width=0.5\textwidth]{\TheLogo}	    	 
 		    \label{fig:ejemplo}
 		\end{figure}
         \vspace{5mm}
 
-        \LARGE\textsc{Nombre del documento}
+        \LARGE\textsc{\TheNameDocument}
 
-        
         \vspace{1cm}
         
         \begin{minipage}{0.9\textwidth}
-            {\Large\textbf{Integrante:}}
+            {\Large\textbf{Estudiante:}}
             \begin{itemize}
-                \item[$ \bullet $] \textsl{Nombre01}
-				\item[$ \bullet $] \textsl{Nombre02}
+                \item[$ \bullet $] \textsl{\TheAuthor}\hfill \textsl{\TheCodeAuthor}
             \end{itemize}
         \end{minipage}
         
         \vfill
-        {\Huge \textbf{2025}}
+        {\Huge \textbf{\the\year}}
     \end{center}
 \end{titlepage}
