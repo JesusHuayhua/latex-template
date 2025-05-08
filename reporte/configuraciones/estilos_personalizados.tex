@@ -1,0 +1,24 @@
+%%==========================================
+%% Comandos para insertar de forma más sencilla el contenido los campos
+%%==========================================
+\newcommand{\TheInstituion}{}
+\newcommand{\Institution}[1]{\renewcommand{\TheInstituion}{#1}}
+
+\newcommand{\TheAreaInstitution}{}
+\newcommand{\AreaInstitution}[1]{\renewcommand{\TheAreaInstitution}{#1}}
+
+\newcommand{\TheLogo}{}
+\newcommand{\Logo}[1]{\renewcommand{\TheLogo}{#1}}
+
+\newcommand{\TheNameDocument}{}
+\newcommand{\NameDocument}[1]{\renewcommand{\TheNameDocument}{#1}}
+
+\newcommand{\TheCodeAuthor}{}
+\newcommand{\CodeAuthor}[1]{\renewcommand{\TheCodeAuthor}{#1}}
+
+\newcommand{\TheAuthor}{}
+\newcommand{\TheAuthorShort}{}
+\newcommand{\Author}[2]{%
+  \renewcommand{\TheAuthorShort}{#1} % Nombre corto
+  \renewcommand{\TheAuthor}{#2}  % Nombre completo
+}
